@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victoria Grace Photography</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="main-content">
+  <header>
+    <h1>Victoria Grace Photography</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="home">
+    <h2>Capturing Moments That Matter</h2>
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a professional photography business specializing in portraits, weddings, and events. Our goal is to create timeless, high-quality imagery that tells your story with clarity and style.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="./images/LAT1.JPG" alt="" onclick="openLightbox(this.src)">
+      <img src="./images/LAT2.JPG" alt="" onclick="openLightbox(this.src)">
+      <img src="./images/LAT3.JPG" alt="" onclick="openLightbox(this.src)">
+      <img src="./images/LAT4.JPG" alt="" onclick="openLightbox(this.src)">
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Family Photography</li>
+      <li>Graduation Sessions</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: vgplocek.photography@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>2026 Victoria Grace Photography</p>
+  </footer>
+</div> <!-- end main-content -->
+
+<!-- Lightbox Modal -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
