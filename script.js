@@ -7,12 +7,16 @@ const header = document.querySelector('header');
 function openLightbox(src) {
   lightboxImg.src = src;
   lightbox.style.display = 'flex';
-  mainContent.classList.add('blur'); // blur background
+  if (mainContent) {
+    mainContent.classList.add('blur');
+  }
 }
 
 function closeLightbox() {
   lightbox.style.display = 'none';
-  mainContent.classList.remove('blur'); // remove blur
+  if (mainContent) {
+    mainContent.classList.remove('blur');
+  }
 }
 
 // Navbar scroll blur

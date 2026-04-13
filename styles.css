@@ -5,6 +5,7 @@ body {
   color: #1f2d2a;
 }
 
+/* ================= HEADER ================= */
 header {
   background: linear-gradient(90deg, #0f4c81cc, #1abc9ccc);
   padding: 15px 40px;
@@ -48,10 +49,15 @@ nav a:hover::after {
   width: 100%;
 }
 
+/* ================= HERO ================= */
 .hero {
   height: 70vh;
-  background: linear-gradient(rgba(15,76,129,0.3), rgba(26,188,156,0.3)), url('https://source.unsplash.com/1600x900/?nature,water') center/cover no-repeat;
+  background: linear-gradient(rgba(15,76,129,0.3), rgba(26,188,156,0.3)),
+              url('https://source.unsplash.com/1600x900/?nature,water')
+              center/cover no-repeat;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -64,8 +70,30 @@ nav a:hover::after {
   background: rgba(255,255,255,0.15);
   padding: 15px 25px;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
+/* ================= BUTTON ================= */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
+  background: linear-gradient(90deg, #1abc9c, #16a085);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(26,188,156,0.3);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(26,188,156,0.4);
+  background: linear-gradient(90deg, #16a085, #1abc9c);
+}
+
+/* ================= SECTIONS ================= */
 section {
   padding: 60px 50px;
   max-width: 1100px;
@@ -84,6 +112,7 @@ h2 {
   color: #3b5a54;
 }
 
+/* ================= GALLERY ================= */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -103,6 +132,7 @@ h2 {
   box-shadow: 0 5px 15px rgba(26,188,156,0.15);
 }
 
+/* ================= SERVICES ================= */
 #services ul {
   list-style: none;
   padding: 0;
@@ -117,11 +147,13 @@ h2 {
   box-shadow: 0 1px 5px rgba(15,76,129,0.05);
 }
 
+/* ================= CONTACT ================= */
 #contact p {
   margin: 10px 0;
   color: #2f3e3b;
 }
 
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 25px;
@@ -130,6 +162,7 @@ footer {
   font-size: 14px;
 }
 
+/* ================= LIGHTBOX ================= */
 #lightbox {
   display: none;
   position: fixed;
@@ -147,15 +180,16 @@ footer {
   max-width: 85%;
   max-height: 75%;
   border-radius: 10px;
-  border: none;
 }
 
+/* ================= BLUR EFFECT ================= */
 #main-content.blur {
   filter: blur(8px);
   transition: filter 0.3s ease;
   pointer-events: none;
 }
 
+/* ================= SCROLL ================= */
 html {
   scroll-behavior: smooth;
 }
@@ -166,8 +200,9 @@ header.scrolled {
   transition: backdrop-filter 0.3s, background 0.3s;
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  /* Header */
+
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -190,7 +225,6 @@ header.scrolled {
     font-size: 14px;
   }
 
-  /* Hero */
   .hero {
     height: 50vh;
     padding: 0 20px;
@@ -201,7 +235,6 @@ header.scrolled {
     padding: 10px 15px;
   }
 
-  /* Sections */
   section {
     padding: 40px 20px;
   }
@@ -214,71 +247,38 @@ header.scrolled {
     font-size: 14px;
   }
 
-  /* Gallery grid for mobile */
   .gallery {
-    grid-template-columns: 1fr; /* one column on small screens */
+    grid-template-columns: 1fr;
     gap: 15px;
   }
 
   .gallery img {
-    height: auto; /* maintain aspect ratio */
+    height: auto;
   }
 
-  /* Services list */
   #services li {
     padding: 12px;
     font-size: 14px;
   }
 
-  /* Footer */
   footer {
     font-size: 12px;
     padding: 20px 10px;
   }
 }
 
-/* Optional: extra small phones */
 @media (max-width: 480px) {
+
   .hero h2 {
     font-size: 22px;
   }
 
   nav a {
     font-size: 12px;
-    margin: 3px 5px 3px 0;
+    margin: 3px 5px;
   }
 
   section {
     padding: 30px 15px;
   }
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 28px;
-  background: linear-gradient(90deg, #1abc9c, #16a085);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  border-radius: 30px;
-  box-shadow: 0 4px 12px rgba(26,188,156,0.3);
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(26,188,156,0.4);
-  background: linear-gradient(90deg, #16a085, #1abc9c);
-}
-
-.hero {
-  height: 70vh;
-  background: linear-gradient(rgba(15,76,129,0.3), rgba(26,188,156,0.3)), url('https://source.unsplash.com/1600x900/?nature,water') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;   /* 👈 stack vertically */
-  align-items: center;      /* 👈 center horizontally */
-  justify-content: center;  /* 👈 center vertically */
-  text-align: center;
-  color: #fff;
 }
