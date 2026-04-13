@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Victoria Grace Photography</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="main-content">
+
+<header>
+  <h1>Victoria Grace Photography</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section>
+  <h2>Gallery</h2>
+
+  <div class="gallery">
+    <img src="./images/LAT1.JPG" onclick="openLightbox(this.src)">
+    <img src="./images/LAT2.JPG" onclick="openLightbox(this.src)">
+    <img src="./images/LAT3.JPG" onclick="openLightbox(this.src)">
+    <img src="./images/LAT4.JPG" onclick="openLightbox(this.src)">
+  </div>
+
+  <div class="gallery-cta">
+  <a href="contact.html" class="btn">Book a Session</a>
+  <a href="services.html" class="btn">View Services</a>
+</div>
+</section>
+
+</div>
+
+<!-- LIGHTBOX (outside main-content is IMPORTANT) -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
